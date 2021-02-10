@@ -4,10 +4,10 @@
         <title>APP</title>
      <style type="text/css">
             body {
-                background: rgba(30, 30, 30, 0.962);
+                background: rgb(1, 4, 21);
                 color: rgb(0, 0, 0);
                 padding: 10px;
-                font-family: arial;
+                font-family: cursive;
             }
             header {
                 font-size: 1.5em;
@@ -21,17 +21,25 @@
     
             /* navigation menu */
             nav {
-                background: rgb(46, 106, 93);
+                background: rgb(18, 51, 44);
                 margin: 0 auto;
+                margin-bottom: 5px;
                 display: flex;
                 padding: 10px;
+                border-radius: 20% 10% / 10% 20%;
             }
             h1 {
                 display: flex;
                 align-items: center;
-                color: rgb(108, 6, 6);
+                color: rgb(95, 4, 4);
                 flex: 1;
             }
+
+            ul li:hover {
+                background: rgb(48, 37, 37);
+                border-radius: 20% 15%;
+            }
+
             #nav-ul {
                 list-style-image: none;
             }
@@ -40,18 +48,46 @@
                 padding: 0 10px;
             }
             .nav-a {
-                text-decoration: none;
-                color: rgb(57, 20, 20);
+                text-decoration: rgb(128, 55, 0) wavy underline;
+                color: rgb(132, 4, 4);   
             }
     
             /* main container area beneath menu */
             main {
-                background: rgb(217, 205, 205);
+                background: rgb(192, 181, 181);
                 display: flex;
+                border-radius: 8% 6% / 10% 10%;
             }
             .content {
                 flex: 1;
                 padding: 15px;
+            }
+
+           /* portfolio styles */
+            .content h1 {
+                color: rgb(63, 48, 48);
+                font-size: x-large;
+            }
+            
+            #portfolio {
+                list-style-type: none;
+                padding-left: 0;
+            }
+            
+            #portfolio li {
+                background: rgb(181, 151, 151);
+                padding: 10px;
+                border-radius: 10px;
+                margin-bottom: 10px;
+            }
+            
+            #portfolio li:hover {
+                background: rgb(225, 165, 165);
+            } 
+            
+            #portfolio a {
+                text-decoration: none;
+                color: #1f1616;
             }
      </style>
   </head>
@@ -61,7 +97,7 @@
       <!--Nav section-->
         <nav>
             <!-- Nav stuff -->
-            <h1>Angel's Site</h1>
+            <h1>Angels port</h1>
             <ul id="nav-ul">
                 <li class="nav-li">
                      <a class="nav-a" href="index.html">Home</a>
