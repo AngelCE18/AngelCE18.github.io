@@ -16,8 +16,8 @@
      *      
      *      createPlatform(x, y, scaleX, scaleY);
      * 
-     *      x: The x coordineate for the platform.
-     *      y: The y coordineate for the platform.
+     *      x: The x coordinate for the platform.
+     *      y: The y coordinate for the platform.
      *      scaleX: OPTIONAL The scale factor on the x-axis, this value will 
      *              stretch the platform in width.
      *      scaleY: OPTIONAL The scale factor on the y-axis, this value will 
@@ -37,9 +37,23 @@
         createPlatform(0, game.world.height - 32, 3, 2);    // DO NOT DELETE
 
         // example:
-        createPlatform(400, 250);
-        createPlatform(170, 460, 0.5);
+        createPlatform(520, 380, 0.80, 0.6); // (edited) middle right platform
+
+        //my additional platform code
+        createPlatform(240, 610, 0.60, 0.5); //bottom platform
         
+        createPlatform(14, 525, 0.35, 0.4);  //bottom leftmost platform
+        
+        createPlatform(12, 375, 0.40, 0.4);  //middle leftmost platform
+
+        createPlatform(230, 450, 0.5, 0.6);  //platform above bottom platform
+        
+        createPlatform(240, 305, 0.5, 0.5);  //platform to the left of rightmost platform
+        
+        createPlatform(780, 280, 0.30, 0.5); //upper right platform
+
+        createPlatform(500, 230, 0.50, 0.4);
+
         // ALL YOUR CODE GOES ABOVE HERE ///////////////////////////////////////
         ////////////////////////////////////////////////////////////////////////
     }
