@@ -1,0 +1,120 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+         <title>Angel's Personal Page</title>
+         <style>
+    body {
+        background: rgb(2, 27, 30);
+        color: rgb(0, 0, 0);
+        padding: 10px;
+        font-family: cursive;
+    }
+    #all-contents {
+        max-width: 800px;
+        margin: auto;
+    }
+
+    /* navigation menu */
+    nav {
+        background: rgb(98, 22, 3);
+        margin: 0 auto;
+        margin-bottom: 4px;
+        display: flex;
+        padding: 10px;
+        border-radius: 40% 10% / 9% 20%;
+    }
+    h1 {
+        display: flex;
+        align-items: center;
+        color: rgb(215, 190, 190);
+        flex: 1;
+        margin: 0;
+    }
+    #nav-ul {
+        list-style-image: none;
+    }
+    .nav-li {
+        display: inline-block;
+        padding: 0 10px;
+    }
+
+    .nav-li :hover {
+                background: rgb(101, 60, 60);
+                border-radius: 10px 100px / 120px;
+            } 
+
+    a {
+        text-decoration: none;
+        color: rgb(195, 156, 156);
+    }
+    
+    /* main container area beneath menu */
+    main {
+        background: rgb(164, 161, 156);
+        display: flex;
+        border-radius: 20px 20px 20px 20px;
+    }
+    .sidebar {
+        margin-right: 25px;
+        padding: 10px;
+    }
+    .sidebar-img {
+        width: 200px;
+        border-radius: 20% 14% / 12% 22%;
+    }
+    .content {
+        flex: 1;
+        padding: 15px;
+    }
+    #interests {
+        border: 4px rgb(147, 126, 126) ridge;
+        border-radius: 8px 10px 10px 8px;
+        padding: 8px;
+    }
+    h2, h3 {
+        margin: 0px;
+    }
+</style>
+    </head>
+    
+    <body>
+         <!-- All content goes here -->
+        <div id="all-contents"> 
+             <nav>
+                    <h1>APP</h1>
+                    <ul id="nav-ul">
+                        <li class="nav-li">
+                            <a href= "index.html">Home</a>
+                        </li>
+                        <li class="nav-li">
+                            <a href= "portfolio.html">Portfolio</a>
+                        </li>
+                    </ul>
+             </nav>
+
+             <main>
+                <!-- Sidebar section -->
+                 <div class="sidebar">
+                    <img class="sidebar-img" src= https://www.southcarolinapublicradio.org/sites/wltr/files/styles/medium/public/201705/Angel.jpg>
+                 </div>
+
+                <!-- Content section -->
+                <div class="content">
+                    <h2>Angel</h2>
+                    <p>Senior student at Einstein charter high at Sarah T Reed</p>
+                     <!--Interests section-->
+                 <div id="interests">
+                     <h3>Interests</h3>
+                     <ul>
+                        <li>Music</li>
+                        <li>Sports</li>
+                        <li>Games</li>
+                        <li>Reading</li>
+                     </ul>
+                 </div>
+
+                </div>
+             </main>
+        </div>
+    </body>
+</html>
