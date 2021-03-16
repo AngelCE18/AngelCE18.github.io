@@ -8,13 +8,15 @@
 		.box {
 			width: 70px;
 			height: 70px;
+            background-image: linear-gradient(rgba(0, 0, 255, 0.5), rgba(255, 255, 0, 0.5)),
+                  url("../../media/examples/lizard.png");
 			background-color: teal;
 			font-size: 300%;
 			text-align: center;
 			display: block;
 			position: absolute;
 			top: 100px;
-			left: 0px;  /* <--- Change me! */
+			left: 740px;  /* <--- Change me! */
 		}
 	</style>
 	<!-- 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> -->
@@ -22,7 +24,7 @@
 </head>
 <body class="board">
 	<!-- HTML for the box -->
-	<div class="box">?</div>
+	<div class="box">?</div> 
 
 	<script>
 		(function(){
@@ -45,7 +47,7 @@
 
 			// moves the Box to a new position on the screen along the X-Axis
 			function moveBoxTo(newPositionX) {
-				box.css("left", newPositionX);
+                box.css("left", newPositionX);
 			}
 
 			// changes the text displayed on the Box
@@ -59,16 +61,24 @@
 			
 			// TODO 2 - Variable declarations 
 			
-
-			
-			/* 
-			This Function will be called 20 times/second. Each time it is called,
+             var positionX = 0;  
+             var points = 0;
+             var speed = 10;
+			 
+            /*
+            This Function will be called 20 times/second. Each time it is called,
 			it should move the Box to a new location. If the box drifts off the screen
 			turn it around! 
 			*/
 			function update() {
-				
-
+                positionX += speed;
+                moveBoxTo(positionX);
+                if (positionX > boardWidth){
+                    speed *= -1; 
+                } if (positionX < 0){
+                    speed *= -1;
+                } 
+                
 			};
 
 			/* 
@@ -77,8 +87,14 @@
 			the left side of the screen.
 			*/
 			function handleBoxClick() {
-				
-
+                positionX = 0;    // positionX = 0
+                points = points + 1;
+                changeBoxText(points);
+                if (speed *= 1){
+                    speed += 3;
+                } else if (speed *= -1){
+                    speed -= 3;
+                }
 
 			};
 		})();
