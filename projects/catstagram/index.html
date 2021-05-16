@@ -10,7 +10,29 @@
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="./javascript/brains.js"></script>
     <style>
+        .brand-font{
+            font-style: italic;
+        }
 
+        img{
+            width: 300px;
+            border: solid rgba(187, 126, 13, 0.439);        
+        }
+
+        .caption{
+            margin-bottom: 70px;
+        }
+
+        .pic-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: rgb(214, 198, 189);
+        background-image: linear-gradient(rgba(151, 226, 225, 0.918), rgba(190, 211, 140, 0.898)),
+        url("https://78.media.tumblr.com/b58f700c402dee1975464dc284ae91f0/tumblr_oslh4vbHPl1ws4s25o1_500.png");
+        }
+
+        
     </style>
 
 </head>
@@ -18,29 +40,53 @@
 <!--VISIBLE TO THE USER-->
 <body>
 
-    <h1>Catsagram</h1>
-    <h5>"Sharing the world's cats"</h5>
-    <!--Cat Photo 1-->
-    <img src="https://www.thehappycatsite.com/wp-content/uploads/2017/11/Funny-Cat-Names-HC-long.jpg">
-         <div id="likeCount1"></div>
-         <button id="likeBtn">Like</button>
-         <p>"Don't mind me, just reading about my great ancestors felidae"...(fancy isn't it?)."</p>
-    <img src="https://i.redd.it/g3q78obsja121.jpg">
-         <div id="likeCount1"></div>
-         <button id="likeBtn">Like</button>
-         <p>"How everyone was after watching the notebook."</p>
-    <img src="https://i.pinimg.com/originals/b1/62/95/b162950cacd447834f504749cd8d56d0.jpg">
-         <div id="likeCount1"></div>
-         <button id="likeBtn">Like</button>
-         <p>"I didn't choose this life, this life chose me."</p>
-    <img src="https://i.guim.co.uk/img/media/3bda4e56ba08650fc8e4dcaa655986d1ad9076b5/0_834_4000_2400/master/4000.jpg?width=700&quality=85&auto=format&fit=max&s=ead0d0040ba7647782e3405eb3a29023">
-         <div id="likeCount1"></div>
-         <button id="likeBtn">Like</button>
-         <p>"Show me the nip or get ripped."</p>
-    <img src="https://up.gc-img.net/post_img/2015/03/AgQUkEMDkyzaO5x_q3DiY_2767.jpeg">
-         <div id="likeCount1"></div>
-         <button id="likeBtn">Like</button>
-         <p>"Someone had too much warm milk."</p>
+    <h1 class="brand-font">Catsagram</h1>
+
+    <h5 class="brand-font">"Sharing the world's cats"</h5>
+
+                <!--PICTURE CONTAINER-->
+    <div class="pic-container">
+
+        <!--Cat Photo 1-->
+        <img src="https://www.thehappycatsite.com/wp-content/uploads/2017/11/Funny-Cat-Names-HC-long.jpg">
+            <div id="likeCount1"></div>
+
+            <button id="likeBtn">Like</button>
+
+            <p class="caption">"Don't mind me, i'm just reading about my great ancestors felidae."</p>
+
+        <!--Cat Photo 2-->
+        <img src="https://i.redd.it/g3q78obsja121.jpg">
+            <div id="likeCount1"></div>
+
+            <button id="likeBtn">Like</button>
+
+            <p class="caption">"How everyone was after watching the notebook."</p>
+
+        <!--Cat Photo 3-->
+        <img src="https://i.pinimg.com/originals/b1/62/95/b162950cacd447834f504749cd8d56d0.jpg">
+            <div id="likeCount1"></div>
+
+            <button id="likeBtn">Like</button>
+
+            <p class="caption">"I didn't choose this life, this life chose me."</p>
+
+        <!--Cat Photo 4-->
+        <img src="https://i.guim.co.uk/img/media/3bda4e56ba08650fc8e4dcaa655986d1ad9076b5/0_834_4000_2400/master/4000.jpg?width=700&quality=85&auto=format&fit=max&s=ead0d0040ba7647782e3405eb3a29023">
+            <div id="likeCount1"></div>
+
+            <button id="likeBtn">Like</button>
+
+            <p class="caption">"Show me the nip or get ripped."</p>
+
+        <!--Cat Photo 5-->
+        <img src="https://up.gc-img.net/post_img/2015/03/AgQUkEMDkyzaO5x_q3DiY_2767.jpeg">
+            <div id="likeCount1"></div>
+
+            <button id="likeBtn">Like</button>
+
+            <p class="caption">"Someone had too much warm milk."</p>
+    </div>
 </body>
 
 </html>
