@@ -10,6 +10,12 @@ function runProgram(){
   // Constant Variables
   var FRAME_RATE = 60;
   var FRAMES_PER_SECOND_INTERVAL = 1000 / FRAME_RATE;
+ // var BOARD_WIDTH = $('#board').width();
+ // var BOARD_HEIGHT = $('#board').height();
+  var posX = 0;
+  var posY = 0;
+  var xSpeed = 0;
+  var ySpeed = 0;
   var KEY = {
       "LEFT": 37,
       "UP": 38,
@@ -18,10 +24,7 @@ function runProgram(){
   }
 
   // Game Item Objects
-  var axisX = 0;
-  var axisY = 0;
-  var xSpeed = 0;
-  var ySpeed = 0;
+
 
   // one-time setup
   var interval = setInterval(newFrame, FRAMES_PER_SECOND_INTERVAL);   // execute newFrame every 0.0166 seconds (60 Frames per second)
@@ -45,47 +48,38 @@ function runProgram(){
   Called in response to events.
   */
   function handleKeyDown(event) {
-    if (event.which === KEY.LEFT){
-      xSpeed = -5;
-      console.log("left pressed");
-    }
-    else if (event.which === KEY.UP){
-      ySpeed = -5;
-      console.log("up pressed");
-    }
-    else if (event.which === KEY.RIGHT){
-      xSpeed = 5;
-      console.log("right pressed");
-    }
-    else {
-      ySpeed = 5;
-      console.log("down pressed");
-    }
+    changeXPos(-5, event.which, KEY.LEFT);
+    console.log("left pressed");
+
+    changeXPos(5, event.which, KEY.RIGHT);
+    console.log("right pressed");
+
+    changeYPos(-5, event.which, KEY.UP);
+    console.log("top pressed");
+
+    changeYPos(5, event.which, KEY.DOWN);
+    console.log("down pressed");
+
   }
 
   function handleKeyUp(event) {
-    if (event.which === KEY.LEFT){
-      xSpeed = 0;
-      console.log("left released");
-    }
-    else if (event.which === KEY.UP){
-      ySpeed = 0;
-      console.log("up released");
-    }
-    else if (event.which === KEY.RIGHT){
-      xSpeed = 0;
-      console.log("right released");
-    }
-    else {
-      ySpeed = 0;
-      console.log("down released");
-    }
+    changeXPos(0, event.which, KEY.LEFT);
+    console.log("left released");
+
+    changeXPos(0, event.which, KEY.RIGHT);
+    console.log("right released");
+
+    changeYPos(0, event.which, KEY.UP);
+    console.log("top released");
+
+    changeYPos(0, event.which, KEY.DOWN);
+    console.log("down released");
+    
   }  
   ////////////////////////////////////////////////////////////////////////////////
   ////////////////////////// HELPER FUNCTIONS ////////////////////////////////////
   ////////////////////////////////////////////////////////////////////////////////
 
-  
   function endGame() {
     // stop the interval timer
     clearInterval(interval);
@@ -94,19 +88,33 @@ function runProgram(){
     $(document).off();
   }
 
+  
+
+  function changeXPos(newSpeed, keycode, arrowKey){
+    if (keycode === arrowKey)
+    xSpeed = newSpeed;
+  }
+
+  function changeYPos(newSpeed, keycode, arrowKey){
+    if (keycode === arrowKey)
+    ySpeed = newSpeed;
+  }
+
   function repositionGameItem(){
     // moves the box along the x axis
-    axisX += xSpeed;
+    posX += xSpeed;
     
     // moves the box along the y axis
-    axisY += ySpeed;
+    posY += ySpeed;
   }
 
   function redrawGameItem(){
     // draws the box in a new location and positions it away from the left
-    $("#gameItem").css("left", axisX);
+    $("#gameItem").css("left", posX);
 
     // draws the box in a new location and positions it away from the top
-    $("#gameItem").css("top", axisY);
+    $("#gameItem").css("top", posY);
   }
+
+  
 }
