@@ -1,0 +1,42 @@
+                                             Explanation of pong
+User story/ Gameplay: 
+
+Gameplay - Two players will play a game of "ping pong" where they both have a paddle and will take turns hitting 
+a ball. Each player that hits the ball pass the other's paddle gets a point. If the ball goes pass a player's 
+paddle, they lose a point. Once a player's points reaches 11 they win.
+
+The game begins when whichever one of the player's who has the ball hits it to start the competition.
+
+The game will end when a player's score reaches 11.
+
+I don't know what "ifs" will there be yet.
+
+
+
+
+
+Visual game components:
+
+There will be the board, two paddles, a ball, and a scoreboard.
+    The board will be static.
+    The paddles, ball, and scoreboard will be animated.
+
+The data I need will be the points, the position for X and Y, as well as the speed for X and Y.
+
+
+
+
+
+Events / logic:
+
+Events that will occur in this game will be keyboard events and timer events.
+
+The timer event will start a timer and the keyboard events will control the movement of my program by using 
+keycodes and positions.
+
+The timer event happens at the start of the game so both players start at the same time/ time the rounds 
+and the keyboard events can control the up an down movements for the paddles.
+
+There will also be a collision detector that checks to see if there is collision between the ball and paddles
+similar to bouncing box where if the box would try to go out of bounds it would bounce the box back but instead
+for this game the ball will bounce of the paddles of each player until one or the other scores/wins.
